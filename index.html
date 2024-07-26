@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+      
+        <h1>Gallery</h1>
+
+    <div class="img-container">
+        <div class="image"><img src="image1.jpeg"></div>
+        <div class="image"><img src="image2.jpeg"></div>
+        <div class="image"><img src="image3.jpeg"></div>
+        <div class="image"><img src="image4.jpeg"></div>
+        <div class="image"><img src="image5.jpeg"></div>
+        <div class="image"><img src="image6.jpeg"></div>
+        <div class="image"><img src="image7.jpeg"></div>
+    </div>
+
+    <div class="popup_img">
+        <span>&times;</span>
+        <img src="image1.jpeg">
+    </div>
+
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.img-container img').forEach(image =>{
+
+            image.onclick = () =>{
+            document.querySelector('.popup_img').style.display = 'block'
+            document.querySelector('.popup_img img').src = image.getAttribute('src')
+            }
+         })
+
+         document.querySelector('.popup_img span').onclick = () =>{
+              document.querySelector('.popup_img').style.display = 'none'
+         }
+         {}
+
+
+      
+    </script>
+    
+</body>
+</html>
